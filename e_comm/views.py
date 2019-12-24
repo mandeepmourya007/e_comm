@@ -1,11 +1,11 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 
 from details.models import book
 
 def home(request):
 
 	d = book.objects.all()
-	return render_to_response("../templates/home.html",{"details":d})
+	return render("../templates/home.html",{"details":d})
 def details(request,name):
 
     b = book.objects.filter(title = name)
