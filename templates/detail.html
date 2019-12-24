@@ -1,0 +1,21 @@
+{% extends "comman.html" %}
+{% load static %}
+
+
+{% block title %}Books detail
+ {% endblock  %}
+
+{%  block body %}
+<h2>Books detail</h2>
+<ul>
+  
+  {% for detail in book %}
+ <li><b>Title --></b>{{  detail.title }}<br><br></li>
+ <li><b>Author --></b>{{  detail.author_name }}</li>
+<br><br>
+ <li><b>description --></b><br><p>{{  detail.detail }}</p>p></li>
+<br><br>
+
+ {% endfor %}
+</ul>  
+{%  endblock %}
